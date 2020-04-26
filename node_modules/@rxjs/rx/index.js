@@ -1,0 +1,216 @@
+'use strict';
+
+var Observer = require('./observer');
+
+Observer.addToObject({
+  create: require('./observer/create')
+});
+
+var Observable = require('./observable');
+
+Observable.addToObject({
+  race: require('./observable/race'),
+  bindCallback: require('./observable/bindcallback'),
+  bindNodeCallback: require('./observable/bindnodecallback'),
+  case: require('./observable/case'),
+  catch: require('./observable/catch'),
+  combineLatest: require('./observable/combinelatest'),
+  concat: require('./observable/concat'),
+  create: require('./observable/create'),
+  defer: require('./observable/defer'),
+  empty: require('./observable/empty'),
+  forkJoin: require('./observable/forkjoin'),
+  from: require('./observable/from'),
+  fromArray: require('./observable/fromarray'),
+  fromEvent: require('./observable/fromevent'),
+  fromEventPattern: require('./observable/fromeventpattern'),
+  fromPromise: require('./observable/frompromise'),
+  generate: require('./observable/generate'),
+  generateAbsolute: require('./observable/generateabsolute'),
+  generateRelative: require('./observable/generaterelative'),
+  interval: require('./observable/interval'),
+  just: require('./observable/just'),
+  merge: require('./observable/merge'),
+  never: require('./observable/never'),
+  of: require('./observable/of'),
+  ofScheduled: require('./observable/ofscheduled'),
+  onErrorResumeNext: require('./observable/onerrorresumenext'),
+  pairs: require('./observable/pairs'),
+  range: require('./observable/range'),
+  repeat: require('./observable/repeatvalue'),
+  sequenceEqual: require('./observable/sequenceequal'),
+  start: require('./observable/start'),
+  startAsync: require('./observable/startasync'),
+  throw: require('./observable/throw'),
+  timer: require('./observable/timer'),
+  toAsync: require('./observable/toasync'),
+  when: require('./observable/when'),
+  using: require('./observable/using'),
+  zip: require('./observable/zip')
+});
+
+Observable.addToPrototype({
+  race: require('./observable/race'),
+  and: require('./observable/and'),
+  asObservable: require('./observable/asobservable'),
+  average: require('./observable/average'),
+  buffer: require('./observable/buffer'),
+  bufferCount: require('./observable/buffercount'),
+  bufferTime: require('./observable/buffertime'),
+  bufferTimeOrCount: require('./observable/buffertimeorcount'),
+  catch: require('./observable/catch'),
+  catchHandler: require('./observable/catchhandler'),
+  combineLatest: require('./observable/combinelatest'),
+  concat: require('./observable/concat'),
+  concatAll: require('./observable/concatall'),
+  controlled: require('./observable/controlled'),
+  count: require('./observable/count'),
+  debounce: require('./observable/debounce'),
+  defaultIfEmpty: require('./observable/defaultifempty'),
+  delay: require('./observable/delay'),
+  delaySubscription: require('./observable/delaySubscription'),
+  dematerialize: require('./observable/dematerialize'),
+  distinct: require('./observable/distinct'),
+  distinctUntilChanged: require('./observable/distinctuntilchanged'),
+  do: require('./observable/tap'),
+  every: require('./observable/every'),
+  filter: require('./observable/filter'),
+  finally: require('./observable/finally'),
+  find: require('./observable/find'),
+  findIndex: require('./observable/findindex'),
+  first: require('./observable/first'),
+  flatMap: require('./observable/flatmap'),
+  flatMapFirst: require('./observable/flatmapfirst'),
+  flatMapLatest: require('./observable/flatmaplatest'),
+  flatMapMaxConcurrent: require('./observable/flatmapmaxconcurrent'),
+  forkJoin: require('./observable/forkjoin'),
+  groupJoin: require('./observable/groupjoin'),
+  ignoreElements: require('./observable/ignoreelements'),
+  includes: require('./observable/includes'),
+  indexOf: require('./observable/indexof'),
+  isEmpty: require('./observable/isempty'),
+  join: require('./observable/join'),
+  last: require('./observable/last'),
+  lastIndexOf: require('./observable/lastindexof'),
+  map: require('./observable/map'),
+  materialize: require('./observable/materialize'),
+  max: require('./observable/max'),
+  maxBy: require('./observable/maxby'),
+  merge: require('./observable/merge'),
+  mergeAll: require('./observable/mergeall'),
+  mergeConcat: require('./observable/mergeconcat'),
+  min: require('./observable/min'),
+  minBy: require('./observable/minby'),
+  multicast: require('./observable/multicast'),
+  observeOn: require('./observable/observeon'),
+  onErrorResumeNext: require('./observable/onerrorresumenext'),
+  pairwise: require('./observable/pairwise'),
+  partition: require('./observable/partition'),
+  pausable: require('./observable/pausable'),
+  pausableBuffered: require('./observable/pausablebuffered'),
+  pluck: require('./observable/pluck'),
+  publish: require('./observable/publish'),
+  publishLast: require('./observable/publishlast'),
+  publishValue: require('./observable/publishvalue'),
+  reduce: require('./observable/reduce'),
+  repeat: require('./observable/repeat'),
+  repeatWhen: require('./observable/repeatwhen'),
+  replay: require('./observable/replay'),
+  retry: require('./observable/retry'),
+  retryWhen: require('./observable/retrywhen'),
+  sample: require('./observable/sample'),
+  scan: require('./observable/scan'),
+  sequenceEqual: require('./observable/sequenceequal'),
+  share: require('./observable/share'),
+  shareReplay: require('./observable/sharereplay'),
+  shareValue: require('./observable/sharevalue'),
+  skip: require('./observable/skip'),
+  skipLast: require('./observable/skiplast'),
+  skipLastTime: require('./observable/skiplastwithtime'),
+  skipUntil: require('./observable/skipuntil'),
+  skipUntilTime: require('./observable/skipuntilwithtime'),
+  skipWhile: require('./observable/skipwhile'),
+  slice: require('./observable/slice'),
+  subscribeOn: require('./observable/subscribeon'),
+  some: require('./observable/some'),
+  sum: require('./observable/sum'),
+  switch: require('./observable/switch'),
+  switchFirst: require('./observable/switchfirst'),
+  take: require('./observable/take'),
+  takeLast: require('./observable/takelast'),
+  takeLastBuffer: require('./observable/takelastbuffer'),
+  takeLastBufferTime: require('./observable/takelastbufferwithtime'),
+  lastLastTime: require('./observable/takelastwithtime'),
+  takeUntil: require('./observable/takeuntil'),
+  takeUntilTime: require('./observable/takeuntilwithtime'),
+  takeWhile: require('./observable/takewhile'),
+  tap: require('./observable/tap'),
+  thenDo: require('./observable/thendo'),
+  throttle: require('./observable/throttle'),
+  timeInterval: require('./observable/timeinterval'),
+  timestamp: require('./observable/timestamp'),
+  toArray: require('./observable/toarray'),
+  toMap: require('./observable/tomap'),
+  toPromise: require('./observable/topromise'),
+  toSet: require('./observable/toset'),
+  transduce: require('./observable/transduce'),
+  window: require('./observable/window'),
+  windowCount: require('./observable/windowcount'),
+  windowTime: require('./observable/windowtime'),
+  windowTimeOrCount: require('./observable/windowtimeorcount'),
+  withLatestFrom: require('./observable/withlatestfrom'),
+  zip: require('./observable/zip'),
+  zipIterable: require('./observable/zipiterable'),
+});
+
+// RxJS V4 aliases
+Observable.prototype.amb = Observable.prototype.race;
+Observable.amb = Observable.race;
+Observable.prototype.selectMany = Observable.prototype.flatMap;
+Observable.prototype.select = Observable.prototype.map;
+Observable.prototype.where = Observable.prototype.filter;
+
+// RxJS V5 aliases
+Observable.prototype.mergeMap = Observable.prototype.flatMap;
+Observable.prototype.switchMap = Observable.prototype.flatMapLatest;
+Observable.prototype.exhaustMap = Observable.prototype.flatMapFirst;
+Observable.prototype.exhaust = Observable.prototype.switchFirst;
+Observable.prototype.publishReplay = Observable.prototype.replay;
+Observable.fromCallback = Observable.bindCallback;
+Observable.fromNodeCallback = Observable.bindNodeCallback;
+
+var Subject = require('./subject');
+Subject.addToObject({
+  create: require('./subject/create')
+});
+
+var Rx = {
+  // Disposables
+  BinaryDisposable: require('./binarydisposable'),
+  CompositeDisposable: require('./compositedisposable'),
+  Disposable: require('./disposable'),
+  NAryDisposable: require('./narydisposable'),
+  SerialDisposable: require('./serialdisposable'),
+  SingleAssignmentDisposable: require('./singleassignmentdisposable'),
+
+  // Schedulers
+  Scheduler: require('./scheduler'),
+  VirtualTimeScheduler: require('./scheduler/virtualtimescheduler'),
+  HistoricalScheduler: require('./scheduler/historicalscheduler'),
+
+  // Core
+  Observer: Observer,
+  Observable: Observable,
+
+  // Subjects
+  AsyncSubject: require('./asyncsubject'),
+  BehaviorSubject: require('./behaviorsubject'),
+  ReplaySubject: require('./replaysubject'),
+  Subject: Subject,
+
+  // Testing
+  reactiveTest: require('./testing/reactivetest'),
+  TestScheduler: require('./testing/testscheduler')
+};
+
+module.exports = Rx;

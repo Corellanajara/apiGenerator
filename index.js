@@ -6,12 +6,7 @@ const bodyParser = require('body-parser');
 
 
 const AuthorizationRouter = require('./authorization/routes.config');
-const cuentasRouter = require('./cuenta/routes.config');
-const casosRouter = require('./casos/routes.config');
-const documentosRouter = require('./documentos/routes.config');
-const estadosCaso = require('./estadosCaso/routes.config');
-const estadosTareas = require('./estadosTareas/routes.config');
-const tareaRouter = require('./tarea/routes.config');
+const CausaRouter = require('./causas/routes.config')
 const userRouter = require('./users/routes.config');
 
 
@@ -30,13 +25,7 @@ app.use(function (req, res, next) {
 
 app.use(bodyParser.json());
 AuthorizationRouter.routesConfig(app);
-cuentasRouter.routesConfig(app);
-cuentasRouter.routesConfig(app);
-casosRouter.routesConfig(app);
-documentosRouter.routesConfig(app);
-estadosCaso.routesConfig(app);
-estadosTareas.routesConfig(app);
-tareaRouter.routesConfig(app);
+CausaRouter.routesConfig(app);
 userRouter.routesConfig(app);
 
 
