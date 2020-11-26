@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 
 
 const AuthorizationRouter = require('./authorization/routes.config');
-const CausaRouter = require('./causas/routes.config')
 const userRouter = require('./users/routes.config');
 
 
@@ -25,7 +24,6 @@ app.use(function (req, res, next) {
 
 app.use(bodyParser.json());
 AuthorizationRouter.routesConfig(app);
-CausaRouter.routesConfig(app);
 userRouter.routesConfig(app);
 
 
