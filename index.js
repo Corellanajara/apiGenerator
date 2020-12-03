@@ -4,12 +4,12 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-
 const AuthorizationRouter = require('./authorization/routes.config');
 const userRouter = require('./users/routes.config');
-
+const pedidoRouter = require('./pedido/routes.config');
 
 app.use(function (req, res, next) {
+    //cors    
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
@@ -21,10 +21,13 @@ app.use(function (req, res, next) {
         return next();
     }
 });
-
+// ajustes de parametros para dos cosa
+//eficiencia
+//seguridad
 app.use(bodyParser.json());
 AuthorizationRouter.routesConfig(app);
 userRouter.routesConfig(app);
+pedidoRouter.routesConfig(app);
 
 
 app.listen(config.port, function () {

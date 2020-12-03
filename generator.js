@@ -2,7 +2,6 @@ const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
 const inquirer = require('inquirer');
-var Rx = require('@rxjs/rx');
 var fsPath = require('fs-path');
 var ruta = require("./ruteTemplate");
 var models = require("./modelTemplate");

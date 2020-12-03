@@ -8,8 +8,7 @@ const userSchema = new Schema({
     correo : String,
     clave : String,
     estado : Number,
-    permissionLevel: Number,
-    empresa : String,
+    permissionLevel: Number    
   }, { timestamps: true }
 );
 
