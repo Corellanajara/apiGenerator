@@ -28,6 +28,12 @@ exports.getById = (req, res) => {
             res.status(200).send(result);
         });
 };
+exports.getByDate = (req,res) => {
+    PedidoModel.findByDates(req.body.min,req.body.max)
+    .then((result) => {
+        res.status(200).send(result);
+    });
+}
 exports.patchById = (req, res) => {
     PedidoModel.patchPedido(req.params.pedidoId, req.body)
         .then((result) => {
@@ -40,3 +46,4 @@ exports.removeById = (req, res) => {
             res.status(204).send({});
         });
 };
+ 

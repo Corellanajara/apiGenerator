@@ -18,6 +18,10 @@ app.get('/pedido/:pedidoId', [
     //ValidationMiddleware.validJWTNeeded,    
     pedidoController.getById
 ]);
+app.get('/pedido/byDate', [
+    //ValidationMiddleware.validJWTNeeded,    
+    pedidoController.getByDate
+]);
 app.patch('/pedido/:pedidoId', [ 
     //ValidationMiddleware.validJWTNeeded,    
     pedidoController.patchById

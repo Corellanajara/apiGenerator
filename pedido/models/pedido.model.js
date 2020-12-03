@@ -2,7 +2,7 @@ const mongoose = require('../../common/services/mongoose.service').mongoose;
 const Schema = mongoose.Schema;
 
 const Pedidochema = new Schema({
-    fecha: Date,
+    atributo1: String,
     nombre: String,
     productos: Array,
 
@@ -65,9 +65,18 @@ exports.patchPedido = (id, PedidoData) => {
         });
     })
 };
+exports.findByDates = (date1,date2) => {
+    return Pedido.find({"createdAt": {"$gte": date1, "$lt": date2}})
+        .then((result) => {
+            result = result.toJSON();
+            delete result._id;
+            delete result.__v;
+            return result;
+        });
+}
 exports.removeById = (PedidoId) => {
     return new Promise((resolve, reject) => {
-        Productos.remove({
+        Pedido.remove({
             _id: PedidoId
         }, (err) => {
             if (err) {
