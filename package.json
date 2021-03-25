@@ -19,7 +19,7 @@
     "configstore": "^5.0.1",
     "express-fileupload": "^1.1.7-alpha.3",
     "figlet": "^1.3.0",
-    "fs-path": "0.0.24",
+    "fs-path": "0.0.25",
     "inquirer": "^7.1.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
